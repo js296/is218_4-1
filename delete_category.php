@@ -13,7 +13,7 @@ if ($category_id == null || $category_id == false) {
     $query = 'DELETE FROM categories_guitar1
     	      WHERE categoryID = :category_id';
     $statement = $db->prepare($query);
-    $statement->bindValue(':category_id' $category_id);
+    $statement->bindValue(':category_id', $category_id);
     $statement->execute();
     $statement->closeCursor();
 
