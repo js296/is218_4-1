@@ -42,17 +42,22 @@ $statement->closeCursor();
     <?php endforeach; ?>
   </table>
 
-  <h2>Add category</h2>
+  <h2 class="margin_top_increase">Add category</h2>
+  <form action="add_category.php" method="post"
+  	id="add_category.php">
 
-   <br>
-   <p><a href="index.php">List Products</p>
+    <label>Name:</label>
+    <input type="text" name="name" />
+    <input id="add_category_button" type="submit" value="Add"/>
+  </form>
+
+   <p><a href="index.php">List Products</a></p>
    
-</main>
 
+</main>
 <footer>
   <p>&copy; <?php echo date("Y"); ?> My Guitar Shop, Inc.</p>
 </footer>
-
 </body>
 </html>
 
