@@ -1,7 +1,7 @@
 <?php
 require_once('database.php');
 
-//Get all categoriei
+//Get all categories
 $query = 'SELECT * FROM categories_guitar1 ORDER BY categoryID';
 $statement = $db->prepare($query);
 $statement->execute();
@@ -44,7 +44,7 @@ $statement->closeCursor();
 
   <h2 class="margin_top_increase">Add category</h2>
   <form action="add_category.php" method="post"
-  	id="add_category.php">
+  	id="add_category_form">
 
     <label>Name:</label>
     <input type="text" name="name" />
@@ -60,4 +60,3 @@ $statement->closeCursor();
 </footer>
 </body>
 </html>
-

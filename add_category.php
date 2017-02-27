@@ -4,7 +4,7 @@ $name = filter_input(INPUT_POST, 'name');
 
 //Validate inputs
 if ($name == null) {
-  $error_message = "Invalid category data. Check every field and try again.";
+  $error_message = "Invalid category data. Check all field and try again.";
   include('error.php');
 } else {
     require_once('database.php');
@@ -13,7 +13,7 @@ if ($name == null) {
     $query = 'INSERT INTO categories_guitar1 (categoryName)
     	      VALUES (:category_name)';
     $statement = $db->prepare($query);
-    $statement->bindValues(':category_name', $name);
+    $statement->bindValue(':category_name', $name);
     $statement->execute();
     $statement->closeCursor();
 
